@@ -153,7 +153,7 @@ try {
 
 
     if (process.platform === 'win32') {
-      app.setAppUserModelId('za.ac.nwu.PDF-Marker'); // set appId from package.json or electron-builder.yml?
+      app.setAppUserModelId('za.co.trojanc.PDF-Marker'); // set appId from package.json or electron-builder.yml?
     }
     createWindow();
 
