@@ -61,8 +61,10 @@ const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 
 const logger = require('electron-log');
-
+logger.transports.file.level = "debug"
+logger.transports.console.level = "debug"
 // Only auto download for full (non pre-releases)
+autoUpdater.logger = logger
 autoUpdater.autoDownload = !autoUpdater.allowPrerelease;
 runSettingsMigration()
   .then(migrateAssignmentSettings)
@@ -172,7 +174,7 @@ try {
 
 
     if (process.platform === 'win32') {
-      app.setAppUserModelId('za.ac.nwu.PDF-Marker'); // set appId from package.json or electron-builder.yml?
+      app.setAppUserModelId('za.co.trojanc.PDF-Marker'); // set appId from package.json or electron-builder.yml?
     }
     createWindow();
 

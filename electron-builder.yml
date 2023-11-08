@@ -1,5 +1,5 @@
 productName: "PDF Marker"
-appId: za.ac.nwu.PDF-Marker
+appId: za.co.trojanc.PDF-Marker
 
 publish:
   provider: github
