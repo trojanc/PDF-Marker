@@ -1,6 +1,6 @@
 <div mat-dialog-title>
-  <h2 *ngIf="state === 'waiting'">Update Available</h2>
-  <h2 *ngIf="state === 'restart'">Restart Application</h2>
+  <h2 *ngIf="state === 'waiting'" class="mt-2">Update Available</h2>
+  <h2 *ngIf="state === 'restart'" class="mt-2">Restart Application</h2>
   <span class="pdf-marker-fill-space"></span>
   <button type="button" mat-icon-button matTooltip="Close" (click)="onClose()"><mat-icon>close</mat-icon></button>
 </div>
@@ -27,7 +27,7 @@
 </mat-dialog-content>
 
 <div mat-dialog-actions >
-  <button *ngIf="state === 'waiting' && !canSkip" color="primary" mat-button mat-raised-button (click)="cancel()" cdkTrapFocus>Ok</button>
+  <button *ngIf="state === 'waiting' && !canSkip" color="primary" mat-button mat-raised-button (click)="ok()" cdkTrapFocus>Ok</button>
   <button *ngIf="state === 'restart' || canSkip" color="primary" mat-button mat-raised-button (click)="yes()" style="margin-right: 16px" cdkTrapFocus>Yes</button>
   <button *ngIf="state === 'restart' || canSkip" color="accent" mat-button (click)="cancel()">No</button>
 </div>

@@ -38,6 +38,10 @@ export class UpdateModalComponent implements OnInit {
     }
   }
 
+  ok(){
+    this.dialogRef.close('download');
+  }
+
   cancel() {
     this.dialogRef.close();
   }

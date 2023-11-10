@@ -78,7 +78,7 @@ export class UpdateService {
 
   initialise(): void {
     this.checkForUpdate().subscribe((data) => {
-      if (!isNil(data) && !isNil(data.cancellationToken)) {
+      if (!isNil(data)) {
         this.promptDownloadUpdate(data);
       }
     });
